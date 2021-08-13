@@ -20,7 +20,7 @@ fetch("http://localhost:3000/api/furniture")
                                                                         <img src="${furniture.imageUrl}" alt="image" class="card-img-top" />
                                                                             <div class="card-body">
                                                                                 <h5 class="card-title">${furniture.name}</h5>
-                                                                                <p class="card-text lead">${furniture.description}</p>
+                                                                                <p class="card-text">${furniture.description}</p>
                                                                                 <p class="card-text fw-bold">${furniture.getFormatedPrice()} €</p>
                                                                                 <a href="produit.html?id=${furniture._id}" class="btn btn-primary stretched-link">Détails</a>
                                                                             </div>
