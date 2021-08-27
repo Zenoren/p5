@@ -15,8 +15,10 @@ const promesse = fetch(`http://localhost:3000/api/furniture/${selectedId}`);
 if(selectedId != null) {
 promesse
 	.then((response) => {
-		const furnitureData = response.json(); //j'enregistre dans une variable les données de la réponse de la promesse transformées en json.
-		furnitureData.then((meuble) => { // je récupère le tableau correspondant à mon meuble
+        //j'enregistre dans une variable les données de la réponse de la promesse transformées en json.
+		const furnitureData = response.json(); 
+        // je récupère le tableau correspondant à mon id
+		furnitureData.then((meuble) => { 
 			const id = meuble._id;
 			const description = meuble.description;
 			const imageUrl = meuble.imageUrl;
