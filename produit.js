@@ -1,11 +1,15 @@
-//remplit la page avec les infos de l'api
+//Récupération de la chaine de requête dans l'url
+const queryString_url_id = window.location.search;
+console.log(queryString_url_id);
 
+//Extraire l'id
+const urlSearchParams = new UrlSearchParams(queryString_url_id)
+console.log(urlSearchParams);
 
-//les parametres de l'url pour la page produit
+const SelectedId = urlSearchParams.get("id");
+console.log(SelectedId);
 
-//extraction de l'id
-
-/* Affichage du meuble */
+// Affichage du produit selectionné par l'id
 const badUrl = `http://localhost:3000/api/furniture/null`;
 const promesse = fetch(`http://localhost:3000/api/furniture/${selectedId}`);
 if(selectedId != null) {
@@ -24,7 +28,7 @@ promesse
 				structureVarnish += `<li><a class="dropdown-item" href="#">${varnish[i]}</a></li>`;
           }
 
-        }   
-        ) } 
+        }  
+        ) }
 )
 }
